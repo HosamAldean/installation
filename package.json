@@ -10,6 +10,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
+    "preview": "vite preview",
     "format": "prettier --write \"src/**/*.ts\" ",
     "lint": "eslint --fix",
     "prepare": "simple-git-hooks",
