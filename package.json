@@ -10,10 +10,10 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "preview": "vite preview",
     "format": "prettier --write \"src/**/*.ts\" ",
     "lint": "eslint --fix",
     "prepare": "simple-git-hooks",
+    "preview": "vite preview",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -48,6 +48,7 @@
     "radix-ui": "1.4.3",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "react-router": "^7.9.5",
     "react-router-dom": "^7.9.4",
     "react-scan": "0.4.3",
     "recharts": "^3.3.0",
@@ -66,6 +67,7 @@
     "@types/node": "24.6.2",
     "@types/react": "19.2.0",
     "@types/react-dom": "19.2.0",
+    "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
     "@types/recharts": "^1.8.29",
     "@vitejs/plugin-react": "^5.1.0",
