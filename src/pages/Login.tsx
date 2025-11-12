@@ -8,7 +8,8 @@ import { useLanguage } from '~/context/LanguageContext'
 
 // Automatically select API URL based on environment
 const API_URL =
-  import.meta.env.VITE_API_URL?.replace(/\/$/, '') || 'http://localhost:4000'
+  import.meta.env.VITE_API_URL?.replace(/\/$/, '') ||
+  'http://192.168.20.157:4000'
 
 interface LoginForm {
   username: string
