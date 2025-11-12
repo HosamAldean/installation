@@ -1,4 +1,5 @@
-﻿import { fileURLToPath, resolve } from 'node:url'
+﻿// file: frontend/vite.config.ts
+import { fileURLToPath, resolve } from 'node:url'
 
 import tailwindcss from '@tailwindcss/vite'
 import reactRefresh from '@vitejs/plugin-react'
@@ -45,12 +46,5 @@ export default defineConfig({
         secure: false,
       },
     },
-  },
-  preview: {
-    allowedHosts: [
-      'installation.onrender.com', // ✅ Render domain
-      'localhost', // ✅ Allow local preview
-    ],
-    port: 4173, // optional, but avoids conflicts
   },
 })
