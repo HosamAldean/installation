@@ -1,4 +1,4 @@
-﻿ 
+﻿// frontend/src/pages/Login.tsx
 import axios from 'axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -6,9 +6,9 @@ import { toast } from 'sonner'
 
 import { useLanguage } from '~/context/LanguageContext'
 
+// Automatically select API URL based on environment
 const API_URL =
-  import.meta.env.VITE_API_URL?.replace(/\/$/, '') ||
-  'http://192.168.20.157:4000'
+  import.meta.env.VITE_API_URL?.replace(/\/$/, '') || 'http://localhost:4000'
 
 interface LoginForm {
   username: string
@@ -27,9 +27,6 @@ export default function Login() {
   const { strings, language, toggleLanguage } = useLanguage()
   const [form, setForm] = useState<LoginForm>({ username: '', password: '' })
   const [loading, setLoading] = useState(false)
-
-  // Use this to debug (toggle manually if needed)
-  const showDebug = false
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -144,12 +141,6 @@ export default function Login() {
         >
           {loading ? strings.loggingIn : strings.button}
         </button>
-
-        {showDebug && (
-          <pre className="mt-4 p-2 bg-gray-100 rounded text-sm overflow-auto">
-            {JSON.stringify(form, null, 2)}
-          </pre>
-        )}
       </form>
     </div>
   )
