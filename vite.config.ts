@@ -14,7 +14,7 @@ import PKG from './package.json'
 const ROOT = fileURLToPath(new URL('./', import.meta.url))
 
 // Use environment variable for backend API
-const API_TARGET = process.env.VITE_API_URL || 'http://localhost:4000'
+const _API_TARGET = process.env.VITE_API_URL || 'http://localhost:4000'
 
 export default defineConfig({
   plugins: [
@@ -44,10 +44,13 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: API_TARGET,
+        target: 'http://192.168.20.157:4000',
         changeOrigin: true,
         secure: false,
       },
     },
+  },
+  preview: {
+    allowedHosts: ['installation.onrender.com'],
   },
 })
